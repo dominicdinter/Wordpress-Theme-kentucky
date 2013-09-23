@@ -1,0 +1,57 @@
+/*
+Theme Name: Kentucky
+Author: Dominic Dinter, Jannick Reyman
+Description: This is a blank Theme called \'Kentucky\'. It\'s based on the Bootstrap 3 framework.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: kentucky
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+
+Collonel Sanders would be impressed...
+
+                 `.-:-..                         
+           ./syys+///+ossso-                    
+      `-/smNh-            .+hs-                 
+      dNNNh/..--.`           -hy`               
+     :mNNmdNdNNNNNms`  `       od`              
+   .yNNNNy:+do-```..  `      `  yh              
+  :NNmy+` yN:`               `y..No             
+   /NN/ .hNo``                +m-mN`            
+    dNy sNN:`         ` `      :NNh             
+   `NNh hNy....--.    .+syhhshsymmm:            
+   -mNN:hdmdhNhymNmysyNNNhysdNy +:od            
+    `mNNoNNhmyssssNd``+-`.` .y: ` ss            
+     hNNydNh-.    +m`   ````--   .m.            
+     `hNNNNNy:```doh-  `+mh/``  .ho             
+      `+NNNNNo/smNNyhdho. -ydo `mN:             
+        sNNNNNydNh::+osyyyhhmd `m/              
+        `+dNNm.:NNNNNsooos+oN. `m.              
+          `dNNy.oNdNNo`    `:` oNh-             
+           `yNNm+-.mM:`      `sN:oNmhs+.        
+            sNNNNNmNN.    --oNd- .N-hhhNyssss-  
+           -NN+/hNNNNs`  `hNh/   .d`:msdh`      
+        `odNNNo `./hNNmo-yNddm/  /o `mdsmy      
+    ./sdNNdNo/m. .NNNNNNNNNNmmo  y` `sNyyNs     
+ /ydyshNNmhM:`:h.`sysmshNN++so- .-  `-MhyyNo    
+`/.  `-NNhdM/ `-s/  +.-NNNN- `:      .mmyyhm    
+     `yNmsmNo   `-:  :mNoNNdooso+yy+ohy:syyo    
+    `-NNdsmNm++syhdmNmdddhhyyys+ +y:`ss`.yy:    
+    `yNNysmNNNmddhyyyyyyyyyyyyys`-yo :y: oy`    
+   `.dmdssyyssssssssssssssssssss.`ss.`so .o
+
+
+
+*/
+
+.site-content {
+	margin-top: 40px;
+}
+.search-top {
+	margin-top: 8px;
+}
