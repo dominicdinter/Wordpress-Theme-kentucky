@@ -41,6 +41,7 @@
 			</div>
 			
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<div class="row">
 						<?php
 
 							$args = array(
@@ -54,8 +55,12 @@
 							wp_nav_menu($args);
 
 						?>
-			<div class="search-top">
-				<?php get_search_form(); ?>
+					<div class="search-top col-lg-4 col-md-4 col-sm-4 pull-right">
+						<div class="row">
+							<?php get_search_form(); ?>
+						</div>
+					</div>
+				</div>
 			</div>
 
 <!-- 						<div class="col-lg-4 pull-right">
