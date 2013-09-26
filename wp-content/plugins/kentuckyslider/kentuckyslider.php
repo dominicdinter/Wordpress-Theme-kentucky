@@ -57,8 +57,11 @@ function np_widgets_init() {
 
 function np_function($type='np_function') {
     $args = array('post_type' => 'np_images', 'posts_per_page' => 5);
-    $result = '<div class="slider-wrapper theme-default">';
-    $result .= '<div id="slider" class="nivoSlider">';
+    $result = '<div id="carousel-example-generic" class="carousel slide">';
+    $result .= '<ol class="carousel-indicators">';
+    $result .= '</ol>';
+    $result .= '<div class="carousel-inner">';
+    
     //the loop
     $loop = new WP_Query($args);
     while ($loop->have_posts()) {
@@ -66,12 +69,17 @@ function np_function($type='np_function') {
 
         $the_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $type);
 
-        $result .='<img title="'.get_the_title().'" src="' . $the_url[0] . '" data-thumb="' . $the_url[0] . '" alt=""/>';
+        $result .= '<div class="item">';
+        $result .= '<img title="'.get_the_title().'" src="' . $the_url[0] . '" data-thumb="' . $the_url[0] . '" alt=""/>';
+        $result .= '</div>';
     }
     $result .= '</div>';
-    $result .='<div id = "htmlcaption" class = "nivo-html-caption">';
-    $result .='<strong>This</strong> is an example of a <em>HTML</em> caption with <a href = "#">a link</a>.';
-    $result .='</div>';
+    $result .='<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">';
+    $result .='<span class="icon-prev"></span>';
+    $result .='</a>';
+    $result .='<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">';
+    $result .='<span class="icon-next"></span>';
+    $result .='</a>';
     $result .='</div>';
     return $result;
 }
