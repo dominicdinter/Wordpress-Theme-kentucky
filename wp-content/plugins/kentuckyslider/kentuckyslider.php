@@ -8,10 +8,10 @@
 
 
 // Slider Widget
-class np_Widget extends WP_Widget {
+class ks_Widget extends WP_Widget {
 
     public function __construct() {
-        parent::__construct('np_Widget', 'Nivo Slideshow', array('description' => __('A Nivo Slideshow Widget', 'text_domain')));
+        parent::__construct('ks_Widget', 'Kentucky Slideshow', array('description' => __('You can integrate the Slideshow into a widget field. Notice: You can have only one Slider on a Page!', 'text_domain')));
     }
 
     public function form($instance) {
@@ -41,23 +41,24 @@ class np_Widget extends WP_Widget {
         echo $before_widget;
         if (!empty($title))
             echo $before_title . $title . $after_title;
-        echo np_function('np_widget');
+        echo ks_function('ks_widget');
         echo $after_widget;
     }
 
 }
 
-function np_widgets_init() {  
-    register_widget('np_Widget');  
+function ks_widgets_init() {  
+    register_widget('ks_Widget');  
 }
 
 
 
 // Big Slider
 
-function np_function($type='np_function') {
-    $args = array('post_type' => 'np_images', 'posts_per_page' => 5);
-    $result = '<div id="carousel-example-generic" class="carousel slide">';
+function ks_function($type='ks_function') {
+	
+    $args = array('post_type' => 'ks_images', 'posts_per_page' => 5);
+	$result = '<div id="carousel" class="carousel slide">';
     $result .= '<ol class="carousel-indicators">';
     $result .= '</ol>';
     $result .= '<div class="carousel-inner">';
@@ -74,30 +75,31 @@ function np_function($type='np_function') {
         $result .= '</div>';
     }
     $result .= '</div>';
-    $result .='<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">';
+    $result .='<a class="left carousel-control" href="#carousel" data-slide="prev">';
     $result .='<span class="icon-prev"></span>';
     $result .='</a>';
-    $result .='<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">';
+    $result .='<a class="right carousel-control" href="#carousel" data-slide="next">';
     $result .='<span class="icon-next"></span>';
     $result .='</a>';
-    $result .='</div>';
+	$result .='</div>';
+	$result .='</div>';
     return $result;
 }
 
-function np_init() {
-    add_shortcode('np-shortcode', 'np_function');
+function ks_init() {
+    add_shortcode('kentuckyslider', 'ks_function');
     
-    add_image_size('np_widget', 180, 100, true);
-    add_image_size('np_function', 600, 280, true);
+    add_image_size('ks_widget', 180, 100, true);
+    add_image_size('ks_function', 600, 280, true);
     
     $args = array('public' => true, 'label' => 'Slider Images', 'supports' => array('title', 'thumbnail'));
-    register_post_type('np_images', $args);
+    register_post_type('ks_images', $args);
 }
 
 // hooks
 add_theme_support( 'post-thumbnails' );
-add_action('init', 'np_init');
-add_action('widgets_init', 'np_widgets_init');
+add_action('init', 'ks_init');
+add_action('widgets_init', 'ks_widgets_init');
 
 
 

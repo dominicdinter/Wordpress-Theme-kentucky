@@ -46,7 +46,7 @@ get_header(); ?>
 			  </a>
 			</div> -->
 		
-		<?php echo do_shortcode( '[np-shortcode]' ); ?>
+		<?php echo do_shortcode( '[kentuckyslider]' ); ?>
 
 		<div class="jumbotron">
 			<div class="container">
