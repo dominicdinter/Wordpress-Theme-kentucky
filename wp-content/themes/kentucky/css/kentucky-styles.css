@@ -55,3 +55,22 @@ Collonel Sanders would be impressed...
 .search-top {
 	margin-top: 8px;
 }
+.mainslider {
+  margin-top: -60px;
+}
+.carousel-inner {
+  max-height: 400px;
+}
+.carousel-inner img {
+  width: 100%;
+}
+
+
+
+/* Smartphones ==============================
+============================================*/
+@media (max-width: 767px) {
+  .navbar-nav { padding: 0 15px; }
+
+  .search-top { margin: 10px 15px; }
+}

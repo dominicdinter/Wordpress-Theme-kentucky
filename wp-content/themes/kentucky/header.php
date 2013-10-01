@@ -19,6 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="hfeed site container">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
@@ -55,28 +56,13 @@
 							wp_nav_menu($args);
 
 						?>
-					<div class="search-top col-lg-4 col-md-4 col-sm-4 pull-right">
+					<div class="search-top col-lg-4 col-md-4 col-sm-3 pull-right">
 						<div class="row">
 							<?php get_search_form(); ?>
 						</div>
 					</div>
 				</div>
 			</div>
-
-<!-- 						<div class="col-lg-4 pull-right">
-    <div class="input-group">
-      <input type="text" class="form-control">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div>
-  </div>
-				</div>
-			</div> -->
-
-		
-			<!-- <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?> -->
-			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

@@ -82,7 +82,6 @@ function ks_function($type='ks_function') {
     $result .='<span class="icon-next"></span>';
     $result .='</a>';
 	$result .='</div>';
-	$result .='</div>';
     return $result;
 }
 
